@@ -18,8 +18,12 @@
         </style>
     </head>
     <body>
+        <div class="row text-center ml-4">
+            {{ $path }}
+        </div>
+        <div class="row mt-5 text-center">
         <div class="container">
-            <div class="row mt-5 text-center">
+
                 {!! $qrcode !!}
             </div>
         </div>

@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/public/generateQRCode', 'StakeholderController@generate');
-Route::get('/public/customer/create', 'CustomerController@store');
+Route::post('/public/customer/create', 'CustomerController@store');
 Route::match(array('GET','POST'),'/public/scanQRCode/{customer_id}/{stakeholder_id}', 'CustomerController@update');

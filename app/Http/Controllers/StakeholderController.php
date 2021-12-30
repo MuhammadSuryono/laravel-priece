@@ -24,6 +24,6 @@ class StakeholderController extends Controller
         $customerData = $this->customerRepository->getCustomerStakeholderNull()->first();
         $path = URL::to('/api/public/scanQRCode/'.$customerData->id.'/'.$stakeHolderData->id);
         $qrcode = QrCode::size(400)->generate($path);
-        return view('qrcode', compact('qrcode'));
+        return view('qrcode', compact('qrcode', 'path'));
     }
 }
